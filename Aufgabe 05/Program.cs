@@ -5,20 +5,20 @@ namespace Aufgabe_05
 {
     class Program
     {
-        static StringBuilder wordsbackwards = new StringBuilder("");
+        static StringBuilder wordsBackwardsSB = new StringBuilder();
 
         static void Main(string[] args) {
-            string sentence = "Hallo Welt";
+            string sentence = "Die Maus frisst Käse";
             string[] words = sentence.Split(" ");
             Console.WriteLine("Sentence: " + sentence);
             Console.WriteLine("Backwards per Letter: " + backwardsPerLetter(sentence));
             Console.WriteLine("Backwards per Word: " + backwardsPerWord(words));
-            Console.WriteLine("Words Backwards: " + wordsbackwards);
+            Console.WriteLine("Words Backwards: " + wordsBackwardsSB);
         }
 
         public static string backwardsPerLetter(string sentence)
         {
-            StringBuilder letters = new StringBuilder("");
+            StringBuilder letters = new StringBuilder();
 
             for (int i = sentence.Length-1; i >= 0; i--)
             {
@@ -30,16 +30,16 @@ namespace Aufgabe_05
 
         public static string backwardsPerWord(string[] words)
         {
-            StringBuilder bPword = new StringBuilder("");
+            StringBuilder bPword = new StringBuilder();
 
             for (int i = words.Length-1; i >= 0; i--)
             {
                 bPword.Append(words[i]);
-                wordsbackwards.Append(backwardsPerLetter(words[i] + " "));
+                wordsBackwardsSB.Append(backwardsPerLetter(words[words.Length-1-i] + " "));
             }
 
             // wordsbackwards.Length--; Required?
-
+            wordsBackwardsSB.Remove( 0, 1);
             return bPword.ToString();
         }
     }
