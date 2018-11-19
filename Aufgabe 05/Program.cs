@@ -7,7 +7,8 @@ namespace Aufgabe_05
     {
         static StringBuilder wordsBackwardsSB = new StringBuilder();
 
-        static void Main(string[] args) {
+        static void Main(string[] args)
+        {
             string sentence = "Die Maus frisst Käse";
             string[] words = sentence.Split(" ");
             Console.WriteLine("Sentence: " + sentence);
