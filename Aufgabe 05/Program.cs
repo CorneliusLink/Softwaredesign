@@ -40,7 +40,7 @@ namespace Aufgabe_05
             }
 
             // wordsbackwards.Length--; Required?
-            wordsBackwardsSB.Remove( 0, 1);
+            wordsBackwardsSB.Remove(0, 1);
             return bPword.ToString();
         }
     }
