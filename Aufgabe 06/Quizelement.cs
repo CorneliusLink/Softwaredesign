@@ -8,12 +8,12 @@ namespace Aufgabe_06
         public string [] answers;
         public int correct;
 
-        public static void createMenu (string[] answers, string question, int correct, int questionCount, int credits) {
+        public static void createMenu (string question, string[] answers,  int correct, int questionCount, int credits) {
             ConsoleKeyInfo key;
-            int choice = Int32.Parse(Program.menuCreator(answers, question));
+            int choice = Int32.Parse(Program.MenuCreator(question, answers));
             if (choice == correct) {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\nDeine Antwort ist richtig! Weiter mit ENTER.");
+                    Console.WriteLine("\nDeine Antwort ist richtig! (+10 Punkte!) Weiter mit ENTER.");
                     Console.ResetColor();
                     credits = credits + 10;
             }
@@ -30,7 +30,7 @@ namespace Aufgabe_06
             } while (key.KeyChar != 13);
 
             questionCount = questionCount + 1;
-            Program.mainActivity(questionCount, credits);
+            Program.MainActivity(questionCount, credits);
         }
     }
 }
