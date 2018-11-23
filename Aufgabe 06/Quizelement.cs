@@ -30,7 +30,7 @@ namespace Aufgabe_06
             } while (key.KeyChar != 13);
 
             questionCount = questionCount + 1;
-            Program.MainActivity(questionCount, credits);
+            Program.MainMenu(questionCount, credits);
         }
     }
 }

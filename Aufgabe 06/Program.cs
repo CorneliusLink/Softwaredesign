@@ -8,10 +8,10 @@ namespace Aufgabe_06
         {
             int questionCount = 1;
             int credits = 0;
-            MainActivity(questionCount, credits);
+            MainMenu(questionCount, credits);
         }
 
-        public static void MainActivity(int questionCount, int credits)
+        public static void MainMenu(int questionCount, int credits)
         {
             string mainMenuTopLine = "Was möchtest Du tun? (Aktuelle Punktzahl: " + credits + ")\n";
             string[] mainMenuOptions = { "1. Quizfragen beantworten", "2. Eigene Quizfrage erstellen", "3. Beenden" };
