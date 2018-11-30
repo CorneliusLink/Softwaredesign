@@ -78,18 +78,13 @@ namespace Aufgabe_06
         }
         public static string MenuCreator(string topline, string[] options)
         {
-            //Variable to track the current choice
             short curItem = 0, c;
             ConsoleKeyInfo key;
 
-            //Loop until the user presses enter
             do
             {
                 Console.Clear();
-
                 Console.WriteLine(topline);
-
-                // Loop to go through all the menu items
                 for (c = 0; c < options.Length; c++)
                 {
                     if (curItem == c)
@@ -98,18 +93,13 @@ namespace Aufgabe_06
                         Console.WriteLine(options[c]);
                         Console.ResetColor();
                     }
-
                     else
                     {
                         Console.WriteLine(options[c]);
                         Console.ResetColor();
                     }
                 }
-
-                //Waits until the user presses a key
                 key = Console.ReadKey(true);
-
-                //Loops around all the menu items
                 if (key.Key.ToString() == "DownArrow")
                 {
                     curItem++;
@@ -120,10 +110,7 @@ namespace Aufgabe_06
                     curItem--;
                     if (curItem < 0) curItem = Convert.ToInt16(options.Length - 1);
                 }
-
             } while (key.KeyChar != 13);
-
-            // If user presses enter take index of selected menu item and continue
             return curItem.ToString();
         }
 
