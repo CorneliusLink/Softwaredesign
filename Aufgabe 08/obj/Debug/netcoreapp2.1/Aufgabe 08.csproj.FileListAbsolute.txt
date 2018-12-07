@@ -1,0 +1,11 @@
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/obj/Debug/netcoreapp2.1/Aufgabe 08.csprojAssemblyReference.cache
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/obj/Debug/netcoreapp2.1/Aufgabe 08.csproj.CoreCompileInputs.cache
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/obj/Debug/netcoreapp2.1/Aufgabe 08.AssemblyInfoInputs.cache
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/obj/Debug/netcoreapp2.1/Aufgabe 08.AssemblyInfo.cs
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/bin/Debug/netcoreapp2.1/Aufgabe 08.deps.json
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/bin/Debug/netcoreapp2.1/Aufgabe 08.runtimeconfig.json
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/bin/Debug/netcoreapp2.1/Aufgabe 08.runtimeconfig.dev.json
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/bin/Debug/netcoreapp2.1/Aufgabe 08.dll
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/bin/Debug/netcoreapp2.1/Aufgabe 08.pdb
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/obj/Debug/netcoreapp2.1/Aufgabe 08.dll
+/Users/cli/Documents/HFU/Softwaredesign/Aufgabe 08/obj/Debug/netcoreapp2.1/Aufgabe 08.pdb
