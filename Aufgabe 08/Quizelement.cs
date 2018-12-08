@@ -1,7 +1,10 @@
-namespace Aufgabe_08
+using System;
+
+namespace Aufgabe8
 {
-    public class Quizelement
+    class Quizelement
     {
-        
+        public string question;
     }
+
 }

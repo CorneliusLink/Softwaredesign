@@ -1,11 +1,29 @@
-namespace Aufgabe_08
+using System;
+
+namespace Aufgabe8
 {
-    public class QuizFree
+    class QuizFree
     {
-        string rightWord;
+        public string question;
+        public string answer;
+        public static void ShowQuestionAndCheckIfFreeIsCorrect(string question, string answer, int score)
+        {
+            Console.Clear();
+            Console.WriteLine(question + "\n");
+            Console.WriteLine("Wähle die richtige Antworten (+/- 5):");
 
-        static void  CheckInputIsTrue() {
+            string userAnswer = Console.ReadLine();
 
+            if (userAnswer == answer)
+            {
+                Console.WriteLine("Richtig!");
+                score += 10;
+            }
+            else
+            {
+                Console.WriteLine("Leider Falsch...");
+            }
+            Program.QuizMenu(score);
         }
     }
 }
