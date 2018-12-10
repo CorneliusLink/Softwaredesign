@@ -1,5 +1,14 @@
 ﻿using System;
 
+/*
+Code Review:
+Gut.
+-Variablen alle klein geschrieben und englische Namen benutzt. Am Namen ersichtlich was für eine Funktion
+-Mehoden alle goßgeschrieben, am Namen ist ersichtlich was die Methode tut
+-Klassen ebenfalls
+nichts zu meckern
+*/
+
 namespace Aufgabe8
 {
     class Program
