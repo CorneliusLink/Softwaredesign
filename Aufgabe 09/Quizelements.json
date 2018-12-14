@@ -1,0 +1,66 @@
+[
+  {
+    "callToAction": "Gib' die Zahl der richtigen Antwort ein:",
+    "answers": [
+      {
+        "text": "7",
+        "isTrue": true
+      },
+      {
+        "text": "5",
+        "isTrue": false
+      },
+      {
+        "text": "3",
+        "isTrue": false
+      },
+      {
+        "text": "1",
+        "isTrue": false
+      }
+    ],
+    "type": "Single",
+    "question": "Wie viele Tage hat eine Woche?"
+  },
+  {
+    "callToAction": "Gib die Zahlen der richtigen Antworten ein (mit ',' getrennt):",
+    "answers": [
+      {
+        "text": "Samstag",
+        "isTrue": true
+      },
+      {
+        "text": "Montag",
+        "isTrue": false
+      },
+      {
+        "text": "Dienstag",
+        "isTrue": false
+      },
+      {
+        "text": "Sonntag",
+        "isTrue": true
+      }
+    ],
+    "type": "Multiple",
+    "question": "Welche Tage gehören zum Wochenende?"
+  },
+  {
+    "callToAction": "Gib' Ja ('j') oder Nein ('n') ein:",
+    "correct": true,
+    "type": "Binary",
+    "question": "Liegt Furtwangen im Schwarzwald?"
+  },
+  {
+    "callToAction": "Wie lautet Deine Schätzung?",
+    "correct": 12,
+    "type": "Guess",
+    "question": "Wie viele Monate hat ein Jahr?"
+  },
+  {
+    "callToAction": "Gib' die richtige Antwort ein:",
+    "correct": "Himmelsrand",
+    "type": "Free",
+    "question": "In welcher Region Tamriels spielt The Elder Scrolls V? (Deutscher Name)"
+  }
+]
