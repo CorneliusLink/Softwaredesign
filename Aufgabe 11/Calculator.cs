@@ -2,14 +2,14 @@ using System;
 
 namespace Aufgabe_11
 {
-    delegate void ReportProgressMethod(int progress);
+    delegate void ReportProgress(int progress);
     class Calculator
     {
-        public event ReportProgressMethod ProgressMethod;
+        public event ReportProgress ProgressMethod;
         public Calculator()
         {
-            ProgressMethod += ConsoleOutputProgressInPercent;
-            ProgressMethod += ConsoleOutputProgressInfo;
+            ProgressMethod += OutputProgress;
+            ProgressMethod += OutputProgressText;
         }
         public void CalculateSomething()
         {
@@ -24,11 +24,11 @@ namespace Aufgabe_11
                 i++;
             }
         }
-        public void ConsoleOutputProgressInPercent(int _progress)
+        public void OutputProgress(int _progress)
         {
             Console.WriteLine(_progress + " %");
         }
-        public void ConsoleOutputProgressInfo(int _progress)
+        public void OutputProgressText(int _progress)
         {
             if (_progress == 100)
             {
