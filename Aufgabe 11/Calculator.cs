@@ -24,13 +24,13 @@ namespace Aufgabe_11
                 i++;
             }
         }
-        public void OutputProgress(int _progress)
+        public void OutputProgress(int progressCount)
         {
-            Console.WriteLine(_progress + " %");
+            Console.WriteLine(progressCount + " %");
         }
-        public void OutputProgressText(int _progress)
+        public void OutputProgressText(int progressCount)
         {
-            if (_progress == 100)
+            if (progressCount == 100)
             {
                 Console.WriteLine("Fertig!");
             }
