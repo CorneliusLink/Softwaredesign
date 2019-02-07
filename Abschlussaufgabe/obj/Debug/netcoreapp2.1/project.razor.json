@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/Abschlussaufgabe.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

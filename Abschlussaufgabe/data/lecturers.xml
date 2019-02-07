@@ -1,0 +1,14 @@
+<profs>
+    <prof name="Test Prof">
+        <lecture gridId="1">Informatik</lecture>
+        <visitingTime gridId="0">Sprechzeiten</visitingTime>
+    </prof>
+    <prof name="Test Prof 2">
+        <lecture gridId="3">Mathematik</lecture>
+        <visitingTime gridId="5">Sprechzeiten</visitingTime>
+    </prof>
+    <prof name="Test Prof 3">
+        <lecture gridId="3">Mathematik</lecture>
+        <visitingTime gridId="5">Sprechzeiten</visitingTime>
+    </prof>
+</profs>

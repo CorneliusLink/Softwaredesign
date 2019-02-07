@@ -17,7 +17,7 @@ namespace Aufgabe_11
 
             while (i <= 100)
             {
-                if(i == 25 || i == 50 || i == 75 || i == 100)
+                if (i == 25 || i == 50 || i == 75 || i == 100)
                 {
                     ProgressMethod(i);
                 }

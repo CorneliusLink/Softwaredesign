@@ -1,0 +1,11 @@
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/bin/Debug/netcoreapp2.1/Abschlussaufgabe.deps.json
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/bin/Debug/netcoreapp2.1/Abschlussaufgabe.runtimeconfig.json
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/bin/Debug/netcoreapp2.1/Abschlussaufgabe.runtimeconfig.dev.json
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/bin/Debug/netcoreapp2.1/Abschlussaufgabe.dll
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/bin/Debug/netcoreapp2.1/Abschlussaufgabe.pdb
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/obj/Debug/netcoreapp2.1/Abschlussaufgabe.csprojAssemblyReference.cache
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/obj/Debug/netcoreapp2.1/Abschlussaufgabe.csproj.CoreCompileInputs.cache
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/obj/Debug/netcoreapp2.1/Abschlussaufgabe.AssemblyInfoInputs.cache
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/obj/Debug/netcoreapp2.1/Abschlussaufgabe.AssemblyInfo.cs
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/obj/Debug/netcoreapp2.1/Abschlussaufgabe.dll
+/Users/cli/Documents/HFU/Softwaredesign/Abschlussaufgabe/obj/Debug/netcoreapp2.1/Abschlussaufgabe.pdb
