@@ -2,5 +2,13 @@
   "ProjectFilePath": "e:\\HFU\\Hauptstudium\\Softwaredesign\\Aufgabe 09\\Aufgabe 09.csproj",
   "TargetFramework": "netcoreapp2.1",
   "TagHelpers": [],
-  "Configuration": null
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
 }

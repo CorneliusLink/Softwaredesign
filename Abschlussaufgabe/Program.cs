@@ -1,5 +1,9 @@
 ﻿using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace Abschlussaufgabe
 {
@@ -7,49 +11,104 @@ namespace Abschlussaufgabe
     {
         static void Main(string[] args)
         {
-            // XmlDocument xmlDoc = new XmlDocument();
-            // xmlDoc.Load("data/lecturers.xml");
-            // XmlNodeList userNodes = xmlDoc.SelectNodes("//lecturers/lecturer");
-            // // foreach(XmlNode userNode in userNodes)
-            // // {
-            // //     int age = int.Parse(userNode.Attributes["age"].Value);
-            // //     userNode.Attributes["age"].Value = (age + 1).ToString();
-            // // }
-            // // xmlDoc.Save("data/test.xml");
+            //Collect Data
+            List<Dozent> dozentiList = new List<Dozent>();
+            List<Room> roomList = new List<Room>();
+            List<Room> currentRooms = new List<Room>();
+            List<Students> studentList = new List<Students>();
+            Dictionary<String, int> studentDictionary = new Dictionary<String, int>();
 
-            XmlDocument xml = new XmlDocument();
-            xml.Load("data/lecturers.xml");
+            CollectProfData(dozentiList);
+            CollectRoomData(roomList, currentRooms);
+            CollectStudentData(studentList);
 
-            XmlDocument xmlDoc = new XmlDocument();
-            XmlNode rootNode = xmlDoc.CreateElement("users");
-            xmlDoc.AppendChild(rootNode);
+            Schedule table1 = new Schedule();
+            table1.CreateSchedule(dozentiList, roomList, studentDictionary);
 
-            XmlNodeList xnList = xml.SelectNodes("/profs/prof");
-            foreach (XmlNode xn in xnList)
+            string mainMenuUserInput;
+
+            Console.Clear();
+            Console.WriteLine("Bitte wähle den Stundenplan aus, den Du anzeigen möchtest:\n\n1.) Für einen bestimmten Studiengang/ein bestimmtes Semester\n2.) Für einen bestimmten Dozenten\n3.) Gesamter Plan");
+            mainMenuUserInput = Console.ReadLine();
+            Console.Clear();
+
+            switch(mainMenuUserInput)
             {
+                case "1":
+                    Console.WriteLine("Gib' die Studiengangs ID ein: (MIB1, MKB2, OMB4 usw.):");
+                    string courseIdUserChoice = Console.ReadLine();
+                    table1.PrintCourseSchedule(courseIdUserChoice);
+                    break;
+                case "2":
+                    Console.Clear();
+                    Console.WriteLine("Gib' den Nachnamen des gewünschten Dozenten ein:");
+                    string dozentUserChoice = Console.ReadLine();
+                    table1.PrintDozentSchedule(dozentUserChoice);
+                    break;
+                case "3":
+                    table1.PrintSchedule();
+                    break;
+                default:
+                    Console.WriteLine("Falsche Eingabe! Bitte nur eine Zahl zwischen 1 und 3 eingeben.");
+                    break;
+            }
+        }
 
-                //Auslesen
-                string name = xn.Attributes["name"].Value;;
-                string lectureId = xn["lecture"].Attributes["gridId"].Value;
-                string firstName = xn["lecture"].InnerText;
-                string speakingId = xn["visitingTime"].Attributes["gridId"].Value;
-                string lastName = xn["visitingTime"].InnerText;
+        public static List<Dozent> CollectProfData(List<Dozent> dozentiList)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(Dozent));
+            String path = Directory.GetCurrentDirectory() + "/data/dozenti";
 
-                //In neue Datei schreiben
-                XmlNode userNode = xmlDoc.CreateElement("user");
-                XmlAttribute attribute = xmlDoc.CreateAttribute("age");
-                attribute.Value = name;
-                userNode.Attributes.Append(attribute);
-                userNode.InnerText = firstName;
-                rootNode.AppendChild(userNode);
-                //Neues Dokument speichern
-                xmlDoc.Save("test-doc.xml");
-
-                Console.WriteLine(name);
-                Console.WriteLine(lectureId + ". Block: " + firstName);
-                Console.WriteLine(speakingId + ". Block: " + lastName);
+            foreach(var prof in Directory.GetFiles(path))
+            {
+                StreamReader reader = new StreamReader(prof);
+                dozentiList.Add((Dozent)ser.Deserialize(reader));
+                reader.Close();
             }
 
+            return dozentiList;
         }
+
+        public static List<Room> CollectRoomData(List<Room> roomList, List<Room> currentRooms)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(List<Room>));
+            String path = Directory.GetCurrentDirectory() + "/data/rooms";
+
+            foreach(var room in Directory.GetFiles(path))
+            {
+                StreamReader reader = new StreamReader(room);
+                currentRooms = (List<Room>)ser.Deserialize(reader);
+                reader.Close();
+                roomList.AddRange(currentRooms);
+            }
+
+            return roomList;
+        }
+
+        public static Dictionary<string, int> CollectStudentData(List<Students> studentList)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(Students));
+            String path = Directory.GetCurrentDirectory() + "/data/courses";
+
+            foreach(var dir in Directory.GetDirectories(path))
+            {
+                foreach(var cohort in Directory.GetFiles(dir))
+                {
+                    StreamReader reader = new StreamReader(cohort);
+                    studentList.Add((Students)ser.Deserialize(reader));
+                    reader.Close();
+                }
+            }
+
+            Dictionary<String, int> cohortDict = new Dictionary<string, int>();
+
+            foreach(Students cohort in studentList)
+            {
+                cohortDict.Add(cohort.name, cohort.numberOfStundents);
+            }
+
+            return cohortDict;
+        }
+
     }
 }
